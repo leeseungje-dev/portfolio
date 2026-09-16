@@ -1,5 +1,5 @@
 /* *************************
-   COLOR
+   COLOR(CSS 커스텀 변수)
 ************************** */
 :root {
     --ivory: #f3eddf;
@@ -9,10 +9,52 @@
 }
 
 /* *************************
-   RESET
+   RESET(초기화)
 ************************* */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* *************************
+   BASE1(스크롤, 폰트, 이미지)
+************************* */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--ivory);
+    color: var(--black);
+    font-family: sans-serif;
+
+    line-height: 1.6;
+    word-break: keep-all;
+    /* overflow-x: hidden; */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* *************************
+   BASE2(버튼 language/aboutMe)
+************************* */
+
+button {
+    font: inherit;
+    color: inherit;
+
+    background: none;
+    border: none;
+    cursor: pointer;
 }
