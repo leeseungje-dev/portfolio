@@ -1,0 +1,63 @@
+/* *************************
+   HEADER
+************************* */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+    background-color: var(--deep-green);
+    color: var(--ivory);
+}
+
+.nav {
+    display: flex;  /* flex box로 row배치가 default */
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-menu a {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+/* hover한 메뉴를 제외한 나머지 메뉴 흐리게 */
+.nav-menu:has(a:hover) a:not(:hover) {
+    opacity: 0.3;
+}
+
+.language-button {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.language-button:hover {
+    opacity: 1;
+}

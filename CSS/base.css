@@ -47,7 +47,8 @@ image {
 }
 
 /* *************************
-   BASE2(버튼 language/aboutMe)
+   BASE2(버튼 language/aboutMe, 
+   listStyle etc 초기화)
 ************************* */
 
 button {
@@ -58,3 +59,17 @@ button {
     border: none;
     cursor: pointer;
 }
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* 아직은 컨택에 내 주소만 보여주고 입력은 안 받을 거임
+input,
+textarea,
+select {
+    font: inherit;
+}
+*/
