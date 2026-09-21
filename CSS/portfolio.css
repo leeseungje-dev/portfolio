@@ -1,0 +1,158 @@
+/* *************************
+   SKILLS SECTION
+************************* */
+.skills {
+    min-height: 100vh;
+    padding: 120px 0;
+
+    background-color: var(--ivory);
+    color: var(--deep-green);
+}
+
+/* SKILLS와 PROJECTS에서 함께 사용하는 제목 영역 */
+.section-title {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* 작은 안내 문구(what I use) */
+.section-title p {
+    margin-bottom: 6px;
+
+    font-size: 14px;
+    letter-spacing: 0.12em;
+}
+
+/* 큰 섹션 제목(skills) */
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+/* 네 개의 기술 카테고리를 가로 Grid로 배치 */
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+
+    max-width: 1400px;
+    margin: 80px auto 0;
+    padding: 0 40px;
+}
+
+/* 각 기술 카테고리의 위쪽 구분선 */
+.skill-category {
+    padding-top: 16px;
+
+    border-top: 1px solid currentColor;
+}
+
+/* 카테고리 번호 */
+.skill-number {
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    letter-spacing: 0.08em;
+}
+
+/* 카테고리 제목 */
+.skill-category h3 {
+    margin-bottom: 24px;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* 기술 목록과 목록 사이의 간격 */
+.skill-category li {
+    font-size: 16px;
+}
+
+.skill-category li + li {
+    margin-top: 10px;
+}
+
+/* *************************
+   PROJECTS SECTION
+************************* */
+.projects {
+    min-height: 100vh;
+    padding: 120px 0;
+
+    background-color: var(--deep-green);
+    color: var(--ivory);
+}
+
+/* 두 프로젝트를 가로 두 열로 배치 */
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+
+    max-width: 1400px;
+    margin: 80px auto 0;
+    padding: 0 40px;
+}
+
+/* 각 프로젝트의 시작 위치를 구분 */
+.project-card {
+    padding-top: 16px;
+
+    border-top: 1px solid currentColor;
+}
+
+/* PERSONAL / TEAM PROJECT 번호 */
+.project-number {
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    letter-spacing: 0.08em;
+}
+
+/* 프로젝트 썸네일이 들어갈 영역 */
+.project-image {
+    height: 320px;
+    margin-bottom: 24px;
+
+    border: 1px solid currentColor;
+}
+
+/* 프로젝트 유형 */
+.project-type {
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    letter-spacing: 0.12em;
+}
+
+/* 프로젝트 제목 */
+.project-content h3 {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* 프로젝트 소개 문장 */
+.project-description {
+    margin-bottom: 12px;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 프로젝트 상세 페이지 링크 */
+.project-link {
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid currentColor;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s ease;
+}
+
+.project-link:hover {
+    opacity: 0.7;
+}

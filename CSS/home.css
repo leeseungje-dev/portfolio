@@ -1,4 +1,113 @@
+/* *************************
+   HOME SECTION
+************************* */
 .home {
-    padding-top: 80px;
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    background-color: var(--deep-green);
+    color: var(--ivory);
 }
 
+/* HOME 내부의 콘텐츠 배치 */
+.home-content {
+    display: flex;
+    align-items: flex-start;
+
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* 왼쪽 텍스트 영역 */
+.home-text {
+    max-width: 520px;
+}
+
+/* 오른쪽 프로필 사진 영역 */
+.home-character {
+    width: 300px;
+    margin-top: 48px;
+    margin-left: auto;
+}
+
+/* 사진이 부모 영역의 너비를 따르도록 설정 */
+.home-character img {
+    width: 100%;
+}
+
+/* HOME 상단의 과정 안내 문구 */
+.home-course {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    letter-spacing: 0.08em;
+}
+
+/* 이름과 일본어 표기 */
+.home h1 {
+    margin-bottom: 16px;
+
+    font-size: 32px;
+    font-weight: 500;
+}
+
+/* 일본어 이름만 별도 크기와 굵기 적용 */
+.home h1 span {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* 개발자 포트폴리오 역할 안내 */
+.home-role {
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    letter-spacing: 0.12em;
+}
+
+/* 짧은 자기소개 문장 */
+.home-description {
+    max-width: 420px;
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ABOUT ME 버튼과 hover 상태 */
+.about-button {
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid currentColor;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s ease;
+}
+
+.about-button:hover {
+    opacity: 0.7;
+}
+
+/* JavaScript로 열고 닫을 예정인 ABOUT ME 상세 내용 */
+.about-detail {
+    max-width: 520px;
+    margin-top: 40px;
+}
+
+.about-detail h2 {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.about-detail p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-detail p + p {
+    margin-top: 16px;
+}
