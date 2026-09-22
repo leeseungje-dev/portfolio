@@ -1,0 +1,82 @@
+/* *************************
+   CONTACT SECTION
+************************* */
+.contact {
+    min-height: 100vh;
+    padding: 120px 0;
+
+    background-color: var(--deep-green);
+    color: var(--ivory);
+}
+
+/* 마지막 메시지와 연락 링크를 담는 영역 */
+.contact-content {
+    max-width: 1400px;
+    margin: 80px auto 0;
+    padding: 0 40px;
+}
+
+.contact-content h3 {
+    max-width: 720px;
+
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.contact-description {
+    max-width: 520px;
+    margin-top: 24px;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* 이메일과 GitHub로 이동하는 링크 */
+.contact-links {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.contact-links a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 6px;
+
+    transition: opacity 0.3s ease;
+}
+
+.contact-link-label {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+.contact-link-value {
+    font-size: 16px;
+}
+
+.contact-links a:hover {
+    opacity: 0.7;
+}
+
+/* *************************
+   FOOTER
+************************* */
+.footer {
+    padding: 32px 0;
+
+    background-color: var(--deep-green);
+    color: var(--ivory);
+    border-top: 1px solid currentColor;
+}
+
+.footer p {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    font-size: 14px;
+    letter-spacing: 0.04em;
+}
