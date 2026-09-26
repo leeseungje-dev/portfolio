@@ -27,6 +27,34 @@ aboutButton.addEventListener("click", function () {
 });
 
 
+/* MOBILE MENU 열기와 닫기 */
+const menuButton = document.querySelector(".menu-button");
+const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelectorAll(".nav-menu a");
+
+menuButton.addEventListener("click", function () {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
+    if (isOpen) {
+        navMenu.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "MENU";
+    } else {
+        navMenu.classList.add("is-open");
+        menuButton.setAttribute("aria-expanded", "true");
+        menuButton.textContent = "CLOSE";
+    }
+});
+
+navLinks.forEach(function (navLink) {
+    navLink.addEventListener("click", function () {
+        navMenu.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "MENU";
+    });
+});
+
+
 /* K-MOVE NOTE ARCHIVE */
 const archiveButton = document.querySelector(".kmove-archive-button");
 const photoModal = document.querySelector(".photo-modal");

@@ -2,7 +2,218 @@
    RESPONSIVE
 ************************* */
 
-/* Mobile */
-@media (max-width: 768px) {
+/* Tablet: EXPERIENCE의 2열 Archive를 한 열로 변경 */
+@media (max-width: 1280px) {
+    .experience-list {
+        grid-template-columns: 1fr;
+    }
 
+}
+
+/* Mobile: Header 메뉴를 버튼으로 열고 닫기 */
+@media (max-width: 900px) {
+    .nav {
+        position: relative;
+        padding: 20px 24px;
+    }
+
+    .menu-button {
+        display: block;
+        margin-left: auto;
+        margin-right: 24px;
+
+        font-size: 14px;
+        letter-spacing: 0.1em;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 12px 24px 20px;
+
+        background-color: var(--deep-green);
+        border-top: 1px solid rgba(243, 237, 223, 0.2);
+    }
+
+    .nav-menu.is-open {
+        display: flex;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px 0;
+    }
+
+    /* Mobile: HOME을 사진 중심의 세로 구성으로 변경 */
+    .home {
+        display: block;
+        min-height: auto;
+        padding: 120px 0 80px;
+    }
+
+    .home-content {
+        flex-direction: column;
+        align-items: flex-start;
+
+        min-height: 0;
+        padding: 0 24px;
+    }
+
+    .home-text {
+        width: 100%;
+        --home-text-position: 0px;
+    }
+
+    .home h1 {
+        font-size: 38px;
+    }
+
+    .home h1 span {
+        font-size: 20px;
+    }
+
+    .home-description {
+        font-size: 16px;
+    }
+
+    .about-detail {
+        position: static;
+        width: auto;
+        max-width: none;
+    }
+
+    .home-links {
+        align-self: flex-start;
+        flex-direction: row;
+        margin: 32px 0 0;
+        transform: none;
+        font-size: 14px;
+    }
+
+    .home-character {
+        order: -1;
+        align-self: center;
+        width: 220px;
+        margin: 0 auto 48px;
+        transform: none;
+    }
+
+    /* Mobile: SKILLS와 PROJECTS의 Grid를 한 열로 변경 */
+    .skills-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 0 24px;
+    }
+
+    .projects-list {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 0 24px;
+    }
+
+    /* Mobile: K-MOVE Journal과 EXPERIENCE Archive 여백 조정 */
+    .section-title {
+        padding: 0 24px;
+    }
+
+    .kmove-intro,
+    .kmove-content,
+    .kmove-zenn,
+    .experience-list {
+        padding: 0 24px;
+    }
+
+    .kmove-intro,
+    .experience-list {
+        margin-top: 64px;
+    }
+
+    .kmove-content {
+        margin-top: 80px;
+    }
+
+    .kmove-entry {
+        padding: 48px 0;
+    }
+
+    .kmove-entry h3 {
+        font-size: 28px;
+    }
+
+    .experience-list {
+        gap: 48px;
+    }
+
+    .experience-card {
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+    }
+
+    .photo-modal {
+        padding: 24px;
+    }
+
+    .photo-modal-image {
+        max-width: calc(100% - 96px);
+        max-height: calc(100% - 96px);
+    }
+
+    .photo-modal-close {
+        top: 16px;
+        right: 16px;
+    }
+
+    .photo-modal-prev {
+        left: 16px;
+    }
+
+    .photo-modal-next {
+        right: 16px;
+    }
+
+    .photo-modal-title {
+        top: 16px;
+        left: 16px;
+    }
+
+    .photo-modal-count {
+        bottom: 16px;
+    }
+
+    /* Mobile: CONTACT와 FOOTER를 세로 구성으로 변경 */
+    .contact {
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    .contact-content {
+        margin-top: 64px;
+        padding: 0 24px;
+    }
+
+    .contact-content h3 {
+        font-size: 32px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    .footer {
+        padding: 24px 0;
+    }
+
+    .footer p {
+        padding: 0 24px;
+        font-size: 12px;
+    }
 }
