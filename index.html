@@ -78,7 +78,7 @@
                     </p>
 
                     <!-- About Me Button -->
-                    <button type="button" class="about-button">
+                    <button type="button" class="about-button" aria-expanded="false" aria-controls="about-detail">
                         ABOUT ME +
                     </button>
 
@@ -87,7 +87,7 @@
                         後でJavaScriptを使用して
                         ABOUT MEを開閉できるようにする
                     -->
-                    <div class="about-detail">
+                    <div id="about-detail" class="about-detail" hidden>
 
                         <h2>
                             建築からWeb開発へ
@@ -347,77 +347,35 @@
 
             <div class="kmove-content">
 
-                <!-- Layout Preview: 실제 사진을 넣을 때 Journal 기록으로 교체 -->
-                <article class="kmove-entry kmove-entry-start">
+                <!-- 2026년 8~9월 초기 학습 기록 -->
+                <article class="kmove-entry">
 
                     <div class="kmove-entry-heading">
-                        <p class="kmove-date">2026.08</p>
-                        <h3>研修スタート</h3>
-                    </div>
-
-                    <div class="kmove-photo-layout">
-                        <div class="kmove-photo kmove-photo-large">
-                            <span>CLASS / LESSON</span>
-                        </div>
-
-                        <div class="kmove-photo kmove-photo-small">
-                            <span>NOTE / STUDY</span>
-                        </div>
+                        <p class="kmove-date">2026.08 — 09</p>
+                        <h3>初期学習の記録</h3>
                     </div>
 
                     <p class="kmove-caption">
-                        授業風景と個人ノートを一緒に記録する例です。
+                        コードを書く時間と、学習内容をノートにまとめる時間を記録しました。
                     </p>
 
                 </article>
 
 
-                <article class="kmove-entry kmove-entry-learning">
+                <div class="kmove-photo-archive">
 
-                    <div class="kmove-entry-heading">
-                        <p class="kmove-date">2026.09</p>
-                        <h3>LEARNING JAVA</h3>
-                    </div>
+                    <p class="kmove-photo-archive-label">PHOTO ARCHIVE</p>
 
-                    <div class="kmove-photo-layout">
-                        <div class="kmove-photo">
-                            <span>NOTE / JAVA</span>
-                        </div>
-
-                        <div class="kmove-photo">
-                            <span>STUDY / PEOPLE</span>
-                        </div>
-                    </div>
-
-                    <p class="kmove-caption">
-                        個人学習とスタディの様子を一緒に記録する例です。
+                    <p class="kmove-photo-archive-description">
+                        学習の記録を写真で見る
                     </p>
 
-                </article>
+                    <button type="button" class="kmove-archive-button" aria-expanded="false"
+                        aria-controls="kmove-photo-modal" aria-haspopup="dialog">
+                        VIEW PHOTO ARCHIVE →
+                    </button>
 
-
-                <article class="kmove-entry kmove-entry-team">
-
-                    <div class="kmove-entry-heading">
-                        <p class="kmove-date">FUTURE</p>
-                        <h3>TEAM PROJECT</h3>
-                    </div>
-
-                    <div class="kmove-photo-layout">
-                        <div class="kmove-photo kmove-photo-large">
-                            <span>TEAM / PROCESS</span>
-                        </div>
-
-                        <div class="kmove-photo kmove-photo-small">
-                            <span>DAILY / MEAL</span>
-                        </div>
-                    </div>
-
-                    <p class="kmove-caption">
-                        チームプロジェクトの過程と日常を記録する例です。
-                    </p>
-
-                </article>
+                </div>
 
             </div>
 
@@ -475,7 +433,8 @@
                     <p class="experience-number">02</p>
 
                     <div class="experience-image">
-                        <!-- 指導・イベント・プロジェクト関連の画像 -->
+                        <img src="images/experience/skateboarding/2024-asbc/contest/asbc_01.png"
+                            alt="2024 ASIAN STREET BOARD CHALLENGEのポスター">
                     </div>
 
 
@@ -495,6 +454,11 @@
                             スケートボードのインストラクターとしての指導経験や、
                             関連イベント・プロジェクトへの参加経験があります。
                         </p>
+
+                        <button type="button" class="skate-story-button" aria-expanded="false"
+                            aria-controls="skate-photo-modal" aria-haspopup="dialog">
+                            VIEW STORY →
+                        </button>
 
                     </div>
 
@@ -582,6 +546,62 @@
         </section>
 
     </main>
+
+
+    <!-- K-MOVE PHOTO ARCHIVE MODAL -->
+    <div id="kmove-photo-modal" class="photo-modal" hidden>
+
+        <div class="photo-modal-content" role="dialog" aria-modal="true" aria-labelledby="kmove-photo-modal-title">
+
+            <button type="button" class="photo-modal-close" aria-label="写真アーカイブを閉じる">
+                ×
+            </button>
+
+            <button type="button" class="photo-modal-prev" aria-label="前の写真を見る">
+                ←
+            </button>
+
+            <h2 id="kmove-photo-modal-title" class="photo-modal-title">K-MOVE NOTES</h2>
+
+            <img class="photo-modal-image" alt="">
+
+            <button type="button" class="photo-modal-next" aria-label="次の写真を見る">
+                →
+            </button>
+
+            <p class="photo-modal-count">1 / 13</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- SKATEBOARDING STORY MODAL -->
+    <div id="skate-photo-modal" class="photo-modal" hidden>
+
+        <div class="photo-modal-content" role="dialog" aria-modal="true" aria-labelledby="skate-photo-modal-title">
+
+            <button type="button" class="photo-modal-close skate-modal-close" aria-label="スケートボードの記録を閉じる">
+                ×
+            </button>
+
+            <button type="button" class="photo-modal-prev skate-modal-prev" aria-label="前の写真を見る">
+                ←
+            </button>
+
+            <h2 id="skate-photo-modal-title" class="photo-modal-title">2024 ASBC</h2>
+
+            <img class="photo-modal-image skate-modal-image" alt="">
+
+            <button type="button" class="photo-modal-next skate-modal-next" aria-label="次の写真を見る">
+                →
+            </button>
+
+            <p class="photo-modal-count skate-modal-count">1 / 7</p>
+
+        </div>
+
+    </div>
 
 
     <!-- =========================
