@@ -1,16 +1,26 @@
 /* ABOUT ME 열기와 닫기 */
 const aboutButton = document.querySelector(".about-button");
-const aboutDetail = document.querySelector(".about-detail");
+const home = document.querySelector(".home");
+const header = document.querySelector(".header");
+const homeText = document.querySelector(".home-text");
 
 aboutButton.addEventListener("click", function () {
     const isOpen = aboutButton.getAttribute("aria-expanded") === "true";
 
     if (isOpen) {
-        aboutDetail.hidden = true;
+        home.classList.remove("is-about-open");
+        homeText.style.removeProperty("--home-text-position");
         aboutButton.setAttribute("aria-expanded", "false");
         aboutButton.textContent = "ABOUT ME +";
     } else {
-        aboutDetail.hidden = false;
+        const headerBottom = header.getBoundingClientRect().bottom;
+        const currentTextTop = homeText.getBoundingClientRect().top;
+        const targetTextTop = headerBottom + 24;
+        const moveUp = currentTextTop - targetTextTop;
+        const closedPosition = parseFloat(getComputedStyle(homeText).getPropertyValue("--home-text-position"));
+
+        home.classList.add("is-about-open");
+        homeText.style.setProperty("--home-text-position", (closedPosition - moveUp) + "px");
         aboutButton.setAttribute("aria-expanded", "true");
         aboutButton.textContent = "CLOSE ABOUT −";
     }

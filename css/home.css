@@ -2,6 +2,9 @@
    HOME SECTION
 ************************* */
 .home {
+    display: flex;
+    align-items: center;
+
     min-height: 100vh;
     padding-top: 120px;
     padding-bottom: 120px;
@@ -13,23 +16,32 @@
 /* HOME 내부의 콘텐츠 배치 */
 .home-content {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
 
-    max-width: 1400px;
+    width: 100%;
+    min-height: calc(100vh - 240px);
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 40px;
 }
 
 /* 왼쪽 텍스트 영역 */
 .home-text {
+    position: relative;
+
     max-width: 520px;
+    --home-text-position: -112px;
+    transform: translateY(var(--home-text-position));
+    transition: transform 0.4s ease;
 }
 
 /* 오른쪽 프로필 사진 영역 */
 .home-character {
-    width: 300px;
-    margin-top: 48px;
-    margin-left: auto;
+    align-self: center;
+
+    width: 280px;
+    margin-left: 80px;
+    transform: translateY(13px);
 }
 
 /* 사진이 부모 영역의 너비를 따르도록 설정 */
@@ -41,7 +53,7 @@
 .home-course {
     margin-bottom: 10px;
 
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.08em;
 }
 
@@ -49,13 +61,13 @@
 .home h1 {
     margin-bottom: 16px;
 
-    font-size: 36px;
+    font-size: 44px;
     font-weight: 500;
 }
 
 /* 일본어 이름만 별도 크기와 굵기 적용 */
 .home h1 span {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
 }
 
@@ -63,7 +75,7 @@
 .home-role {
     margin-bottom: 24px;
 
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.12em;
 }
 
@@ -72,7 +84,7 @@
     max-width: 420px;
     margin-bottom: 32px;
 
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.8;
 }
 
@@ -92,8 +104,24 @@
 
 /* JavaScript로 열고 닫을 예정인 ABOUT ME 상세 내용 */
 .about-detail {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
     max-width: 520px;
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+    transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.3s ease;
+}
+
+.home.is-about-open .about-detail {
+    max-height: 400px;
     margin-top: 40px;
+
+    opacity: 1;
 }
 
 .about-detail h2 {
@@ -110,4 +138,29 @@
 
 .about-detail p + p {
     margin-top: 16px;
+}
+
+/* HOME에서 외부 기록으로 바로 이동하는 링크 */
+.home-links {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-left: auto;
+    transform: translateY(120px);
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+
+.home-links a {
+    width: fit-content;
+    padding-bottom: 4px;
+
+    border-bottom: 1px solid currentColor;
+    transition: opacity 0.3s ease;
+}
+
+.home-links a:hover {
+    opacity: 0.7;
 }
