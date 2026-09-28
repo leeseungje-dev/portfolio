@@ -12,6 +12,11 @@
 
 /* Mobile: Header 메뉴를 버튼으로 열고 닫기 */
 @media (max-width: 900px) {
+    /* Mobile: 일본어와 영문 혼합 문장이 화면 안에서 줄바꿈되도록 설정 */
+    body {
+        word-break: normal;
+    }
+
     .nav {
         position: relative;
         padding: 20px 24px;
@@ -116,6 +121,12 @@
         grid-template-columns: 1fr;
         gap: 48px;
         padding: 0 24px;
+    }
+
+    /* Grid 항목이 긴 텍스트 때문에 화면보다 넓어지는 것을 방지 */
+    .project-card,
+    .experience-card {
+        min-width: 0;
     }
 
     /* Mobile: K-MOVE Journal과 EXPERIENCE Archive 여백 조정 */
