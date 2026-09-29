@@ -171,6 +171,12 @@
         padding: 24px;
     }
 
+    /* iPhone 주소 표시줄이 보일 때도 닫기 버튼이 화면 안에 남도록 프레임 높이 축소 */
+    .photo-modal-content {
+        height: 70vh;
+        height: 70svh;
+    }
+
     .photo-modal-image {
         max-width: calc(100% - 96px);
         max-height: calc(100% - 96px);
